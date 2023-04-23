@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spam Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <h1>Spam Detection</h1>
+    <form method="post" action="/predict">
+        <h3>Enter a message below to detect weather a message is spam or ham (not spam).</h3>
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message"><br><br>
+        <input type="submit" value="Predict">
+        <h2>Prediction: {{ prediction }}</h2>
+    </form>
+</body>
+
+</html>
